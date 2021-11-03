@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.heading {
+    padding: 30px;
+    font-size: 20px;
+    width: 100%;
+    background-color: #f0f3f4;
+}
+
+.content {
+    padding: 30px;
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 60%;
+}
+
+.right {
+    width: 40%;
+}
+
+.environmental {
+    height: 100px;
+}
+
+.environmental>.column {
+    width: 25%;
+    height: 100%;
+}
+
+.temperature {
+    margin-right: 10px;
+    border: 1px solid #c4d0d4;
+    height: 100%;
+}
+
+.monitor {
+    height: 400px;
+    margin-right: 10px;
+}
+
+.monitor,
+.qrcode {
+    text-align: center;
+    background-color: #f0f3f4;
+    padding: 20px;
+}
+
+.qrcode,
+.notification {
+    height: 250px;
+}
+
+.notification {
+    border: 1px solid #c4d0d4;
+}
+
+img {
+    height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.monitor,
+.notification {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
