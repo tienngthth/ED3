@@ -15,11 +15,23 @@ io.on('connection', function(socket) {
         io.emit('image', data); // emmit to socket
     })
 
-    socket.on('result', function(data) {
-        io.emit('result', data);
+    socket.on('checkInValidation', function(data) {
+        io.emit('checkInValidation', data);
+    })
+
+    socket.on('temperature', function(data) {
+        io.emit('temperature', data);
+    })
+
+    socket.on('moisture', function(data) {
+        io.emit('moisture', data);
+    })
+
+    socket.on('humidity', function(data) {
+        io.emit('humidity', data);
     })
 })
 
-server.listen(3000, () => {
+server.listen(3000, '0.0.0.0', () => {
     console.log('listening on *:3000');
 });
