@@ -11,12 +11,16 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', function(socket) {
-    socket.on('image', function(data) { // listen on client emit 'data'
-        io.emit('image', data); // emmit to socket
+    socket.on('image', function(data) {
+        io.emit('image', data);
     })
 
     socket.on('checkInValidation', function(data) {
         io.emit('checkInValidation', data);
+    })
+
+    socket.on('people', function(data) {
+        io.emit('people', data);
     })
 
     socket.on('temperature', function(data) {
@@ -29,6 +33,10 @@ io.on('connection', function(socket) {
 
     socket.on('humidity', function(data) {
         io.emit('humidity', data);
+    })
+
+    socket.on('reauthenticate', function() {
+        io.emit('reauthenticate');
     })
 })
 
